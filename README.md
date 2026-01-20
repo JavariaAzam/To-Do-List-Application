@@ -1,4 +1,4 @@
-✅ #To-Do List App
+# To-Do List Application
 
 A modern, interactive To-Do List application with full CRUD functionality, progress tracking, and celebratory UI feedback.
 
