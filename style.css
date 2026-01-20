@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= VIDEO BACKGROUND ================= */
+
+.video-bg{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: -1;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ================= TODO CARD ================= */
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: rgba(163, 158, 158, 0.85);
+    backdrop-filter: blur(10px);
+    margin-top: 100px;
+    padding: 40px 30px 70px;
+    border-radius: 12px;
+}
+
+/* ================= HEADER ================= */
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 30px;
+}
+
+/* ================= PROGRESS ================= */
+
+.progress-container{
+    width: 100%;
+    height: 10px;
+    background: #edeef0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar{
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff5945, #ff9f45);
+    transition: width 0.4s ease;
+}
+
+.progress-text{
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ================= INPUT ROW ================= */
+
+.row{
+    display: flex;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* ================= TASK LIST ================= */
+
+ul{
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* checkbox */
+ul li .check{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url("assests/unchecked.png");
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+/* task text */
+.task-text{
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* checked state */
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked .check{
+    background-image: url("assests/checked.png");
+}
+
+/* edit & delete */
+ul li .edit,
+ul li .delete{
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+ul li .edit{
+    font-size: 18px;
+    color: #4e085f;
+}
+
+ul li .delete{
+    font-size: 22px;
+    color: #555;
+}
+
+ul li .edit:hover,
+ul li .delete:hover{
+    background: #edeef0;
+}
+
+/* ================= EDIT MODE ================= */
+
+.edit-input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background: transparent;
+}

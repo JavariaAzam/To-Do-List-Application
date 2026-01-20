@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline class="video-bg">
+    <source src="assests/video2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="overlay"></div>
+ <div class="container">
+    <div class="todo-app">
+        <h2>To-Do List <img src="assests/icon.png" alt="Icon"></h2>
+       <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+</div>
+<p class="progress-text" id="progress-text">0% completed</p>
+
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container">
+           <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+            <li>
+    <span class="check"></span>
+    <span class="task-text">Reading</span>
+    <span class="edit">✏️</span>
+    <span class="delete">✖</span>
+</li>
+
+        </ul>
+    </div>
+ </div> 
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+ <script src="script.js"></script>  
+</body>
+</html>
